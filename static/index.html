@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>博学谷学员信息管理系统</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <script src="../node_modules/axios/dist/axios.min.js"></script>
@@ -20,12 +20,14 @@
     </div>
     <!-- 添加区域 -->
     <div class="add">
-      <input type="text" placeholder="姓名" id="user" />
-      <input type="text" placeholder="学科" id="Sub" />
-      <input type="text" placeholder="年龄" id="Age" />
-      <input type="text" placeholder="性别" id="Stu" />
-      <input type="text" placeholder="学历" id="Gender" />
-      <button class="addUser" id="addUser">添加</button>
+     <form id="add">
+      <input type="text" name="name" placeholder="姓名" id="user" />
+      <input type="text" name="subject" placeholder="学科" id="Sub" />
+      <input type="text" name="age" placeholder="年龄" id="Age" />
+      <input type="text" name="gender" placeholder="性别" id="Stu" />
+      <input type="text" name="degree" placeholder="学历" id="Gender" />
+      <button type="submit" class="addUser" id="addUser">添加</button>
+     </form>
     </div>
 
     <div class="table-box">
@@ -42,18 +44,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>张三</td>
-            <td>前端</td>
-            <td>18</td>
-            <td>男</td>
-            <td>本科</td>
-            <td>
-              <button class="delete">删除</button>
-              <button class="info">编辑</button>
-            </td>
-          </tr>
+
         </tbody>
       </table>
     </div>
@@ -64,31 +55,31 @@
         <a href="#" id="close">X</a>
       </div>
       <div class="editor-body" style="width: 400px; margin: 0 auto">
-        <form>
+        <form id="update">
           <div class="editor-body-item">
             <label class="editor-body-item-label">序号:</label>
-            <input type="text" id="userId" />
+            <input type="text" name="id" id="userId" readonly/>
           </div>
           <div class="editor-body-item">
             <label class="editor-body-item-label">姓名:</label>
-            <input type="text" id="userNumber" />
+            <input type="text" name="name" id="userNumber" />
           </div>
           <div class="editor-body-item">
             <label class="editor-body-item-label">学科:</label>
-            <input type="text" id="userSub" />
+            <input type="text" name="subject" id="userSub" />
           </div>
           <div class="editor-body-item">
             <label class="editor-body-item-label">年龄:</label>
-            <input type="text" id="userAge" />
+            <input type="text" name="age" id="userAge" />
           </div>
 
           <div class="editor-body-item">
             <label class="editor-body-item-label">性别:</label>
-            <input type="text" id="userGender" />
+            <input type="text" name="gender" id="userGender" />
           </div>
           <div class="editor-body-item">
             <label class="editor-body-item-label">学历:</label>
-            <input type="text" id="userStu" />
+            <input type="text" name="degree" id="userStu" />
           </div>
         </form>
       </div>

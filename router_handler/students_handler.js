@@ -15,6 +15,21 @@ module.exports.getStudentsInfoHandler=(req,res)=>{
  })
 }
 
+// 处理函数:获取某个学生的信息
+module.exports.getStudentInfoHandler=(req,res)=>{
+ // TODO:获取某个学生的信息
+ const sqlStr='select * from students where id=?';
+ db.query(sqlStr,req.params.id,(err,results)=>{
+  if(err) throw err;
+  if(results.length!=1) return res.errHandler('获取学生信息失败!');
+  res.send({
+   status:0,
+   message:'获取学生信息成功!',
+   data:results[0]
+  })
+ })
+}
+
 // 处理函数:插入学生信息
 module.exports.insertStudentsInfoHandler=(req,res)=>{
  // 用户提交的数据通过验证

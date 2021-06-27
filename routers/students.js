@@ -8,6 +8,7 @@ const router=express.Router();
 
 // 获取所有学生信息
 router.get('/results',handler.getStudentsInfoHandler);
+router.get('/results/student:id',handler.getStudentInfoHandler);
 
 // 添加学生信息和更细学生信息
 router.post('/results',validate.validateMW(schema.studentinfoSchema),handler.insertStudentsInfoHandler);
