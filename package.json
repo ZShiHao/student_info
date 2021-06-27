@@ -1,0 +1,22 @@
+{
+  "name": "students_info",
+  "version": "1.0.0",
+  "description": "学员信息管理系统",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ZShihao/student_info.git"
+  },
+  "author": "zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZShihao/student_info/issues"
+  },
+  "homepage": "https://github.com/ZShihao/student_info#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
