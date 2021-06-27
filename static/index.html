@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+  </head>
+
+  <body>
+    <div class="head">
+      <div class="logo">
+        <img src="../image/logo.png" alt="" />
+      </div>
+      <h3>博学谷学员信息管理</h3>
+    </div>
+    <!-- 添加区域 -->
+    <div class="add">
+      <input type="text" placeholder="姓名" id="user" />
+      <input type="text" placeholder="学科" id="Sub" />
+      <input type="text" placeholder="年龄" id="Age" />
+      <input type="text" placeholder="性别" id="Stu" />
+      <input type="text" placeholder="学历" id="Gender" />
+      <button class="addUser" id="addUser">添加</button>
+    </div>
+
+    <div class="table-box">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>学科</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>学历</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>张三</td>
+            <td>前端</td>
+            <td>18</td>
+            <td>男</td>
+            <td>本科</td>
+            <td>
+              <button class="delete">删除</button>
+              <button class="info">编辑</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- 编辑弹框 S-->
+    <div class="editor-box" id="editorBox">
+      <div class="editor-header">
+        <p>欢迎来到博学谷</p>
+        <a href="#" id="close">X</a>
+      </div>
+      <div class="editor-body" style="width: 400px; margin: 0 auto">
+        <form>
+          <div class="editor-body-item">
+            <label class="editor-body-item-label">序号:</label>
+            <input type="text" id="userId" />
+          </div>
+          <div class="editor-body-item">
+            <label class="editor-body-item-label">姓名:</label>
+            <input type="text" id="userNumber" />
+          </div>
+          <div class="editor-body-item">
+            <label class="editor-body-item-label">学科:</label>
+            <input type="text" id="userSub" />
+          </div>
+          <div class="editor-body-item">
+            <label class="editor-body-item-label">年龄:</label>
+            <input type="text" id="userAge" />
+          </div>
+
+          <div class="editor-body-item">
+            <label class="editor-body-item-label">性别:</label>
+            <input type="text" id="userGender" />
+          </div>
+          <div class="editor-body-item">
+            <label class="editor-body-item-label">学历:</label>
+            <input type="text" id="userStu" />
+          </div>
+        </form>
+      </div>
+      <button class="over" id="over">确定</button>
+    </div>
+    <!-- 编辑弹框 E-->
+    <!-- 遮罩层 -->
+    <div class="editor-modal" id="editorModal"></div>
+    <script></script>
+  </body>
+</html>
